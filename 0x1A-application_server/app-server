@@ -41,7 +41,7 @@ server {
         alias /data/web_static/current/;
     }
     location /static/ {
-        alias /home/ubuntu/AirBnB_clone_v4/web_dynamic/static/;
+        alias /home/ubuntu/alx-system_engineering-devops/0x1A-application_server/AirBnB_clone_v4/web_dynamic/static/;
         try_files \$uri \$uri/ =404;
     }
     location / {
@@ -72,11 +72,11 @@ sudo systemctl restart nginx
 echo "Nginx configuration has been successfully updated."
 
 # Setup tmux session for task 4 
-cd /home/ubuntu/AirBnB_clone_v3
+cd /home/ubuntu/alx-system_engineering-devops/0x1A-application_server/AirBnB_clone_v3
 tmux new-session -d 'gunicorn --bind 0.0.0.0:5002 api.v1.app:app'
 
 # Setup tmux session for task 5
-cd /home/ubuntu/AirBnB_clone_v4
+cd /home/ubuntu/alx-system_engineering-devops/0x1A-application_server/AirBnB_clone_v4
 git checkout app-server
 
 echo "Done !!!!"
